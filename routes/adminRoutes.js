@@ -1,11 +1,11 @@
-// routes/adminRoutes.js
 const express = require('express');
 const router = express.Router();
-const { authenticateToken, authorizeRole } = require('../middlewares/authenticateToken');
+const authController = require('../controllers/authController'); // Asegúrate de que esta ruta sea correcta
 
-// Ruta solo accesible para admin
-router.get('/admin-data', authenticateToken, authorizeRole('admin'), (req, res) => {
-  res.status(200).json({ message: 'Datos de administrador' });
-});
+// Ruta para registrar un administrador
+router.post('/register', authController.registerAdmin);
+
+// Ruta para iniciar sesión como administrador
+router.post('/login', authController.loginAdmin);
 
 module.exports = router;

@@ -8,4 +8,8 @@ router.post('/register', authController.registerUser);
 // Ruta para hacer login de un usuario
 router.post('/login', authController.loginUser);
 
+//Ruta para registrar un usuario Administrador
+router.post('/admon', authController.registerAdmin);
+
+
 module.exports = router;
