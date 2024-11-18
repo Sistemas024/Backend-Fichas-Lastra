@@ -1,5 +1,6 @@
 const app = require('./app');
 const connectDB = require('./config/db');
+const cors = require('cors');
 
 // Conectar a la base de datos y luego iniciar el servidor
 connectDB().then(() => {
