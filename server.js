@@ -4,12 +4,12 @@ const cors = require('cors');
 
 // Configuración de CORS
 const corsOptions = {
-  origin: 'https://fichas-tecnicas-lastra.vercel.app', // El origen de tu frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-  allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
+  origin: 'https://fichas-tecnicas-lastra.vercel.app', // El dominio de tu frontend
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
-// Aplicar CORS a todas las rutas
+// Aplica CORS a todas las rutas
 app.use(cors(corsOptions));
 
 // Conectar a la base de datos y luego iniciar el servidor
